@@ -41,6 +41,7 @@ class MyCartActivity : AppCompatActivity() {
     }
 
     private fun redirectToCheckout(amount: Int) {
+
         val razorpayLink = "https://rzp.io/l/nibOhHXt"
         val uri = Uri.parse("$razorpayLink?amount=$amount")
         val intent = Intent(Intent.ACTION_VIEW, uri)
