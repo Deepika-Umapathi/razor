@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tool_bar"
                 android:layout_width="match_parent"
@@ -38,11 +39,12 @@
 
             </androidx.appcompat.widget.Toolbar>
 
+
+
             <TextView
                 android:id="@+id/welcome_app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tool_bar"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="12dp"
@@ -51,17 +53,20 @@
                 android:shadowDx="2"
                 android:shadowDy="8"
                 android:shadowRadius="4"
+                android:layout_below="@id/tool_bar"
                 android:text="@string/welcome_our_fashions_app"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
+
+
             <RelativeLayout
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/welcome_app"
                 android:layout_marginTop="12dp"
+                android:layout_below="@+id/welcome_app"
                 android:layout_marginBottom="24dp"
                 android:orientation="horizontal">
 
@@ -146,7 +151,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:orientation="vertical">
 
                     <FrameLayout
@@ -178,16 +182,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/roller_rabbit"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
                         android:text="@string/vade_odelle_dress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
                         android:text="@string/_198_00"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -196,7 +205,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:orientation="vertical">
 
                     <FrameLayout
@@ -211,34 +219,31 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/image" />
+                                android:src="@drawable/product_category01" />
 
 
                         </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:src="@drawable/love" />
                     </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/roller_rabbit"
+                        android:textColor="@color/black"
+
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="@string/vade_odelle_dress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="@string/_198_00"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -246,20 +251,145 @@
 
             </LinearLayout>
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/navigation"
+                </RelativeLayout>
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="bottom"
-                android:background="@drawable/bottom_corner"
-                app:elevation="0dp"
-                app:itemHorizontalTranslationEnabled="true"
-                app:itemPaddingBottom="20dp"
-                app:labelVisibilityMode="labeled"
-                app:menu="@menu/menu" />
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
-        </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:id="@+id/home_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_back">
+
+                        <ImageView
+                            android:id="@+id/home_image"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/home"/>
+                        <TextView
+                            android:id="@+id/home_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Home"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/cart_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/cart_image"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/carted"/>
+                        <TextView
+                            android:id="@+id/cart_text"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cart"
+                            android:textSize="16sp"
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/notification_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/notification_image"
+
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/notification"/>
+                        <TextView
+                            android:id="@+id/notification_text"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notify"
+                            android:textSize="16sp"
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/account_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/account_image"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/profile"/>
+                        <TextView
+                            android:id="@+id/account_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Account"
+                            android:visibility="gone"
+                            android:textSize="16sp"
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:id="@+id/navigation"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:background="@drawable/bottom_corner"-->
+<!--                app:itemTextColor="@color/black"-->
+<!--                app:elevation="0dp"-->
+<!--                app:itemHorizontalTranslationEnabled="true"-->
+<!--                app:itemPaddingBottom="20dp"-->
+<!--                app:labelVisibilityMode="labeled"-->
+<!--                app:menu="@menu/menu" />-->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

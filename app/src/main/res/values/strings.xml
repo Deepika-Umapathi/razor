@@ -35,4 +35,5 @@ Roller Rabbit
     <string name="xl">XL</string>
     <string name="xll">XLL</string>
     <string name="description">Description</string>
+    <string name="promo_code">Promo Code</string>
 </resources>
